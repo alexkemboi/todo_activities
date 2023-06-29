@@ -5,42 +5,39 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1> 
     <div class="card">
         <div class="card-header">
-            <h5 >Activities</h5>
+            <h5 >Welcome to Activities portal</h5>
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="card m-2">
+                <div class="card">
                     <div class="card-header">
-                            <h6>Add activity</h6>
+                        <h6 class="text-left"> <i class="fas fa-plus"></i>Add activity</h6>
                     </div>
                     <div class="card-body">
-                        <form class="form">
+                        <form class="form" method="post" data-ajax="true">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-3">
                                                 <label for="activityInput">Activity Name</label>
-
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-9">
                                                  <input class="form-control" type="text" id="activityInput" />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3">
+                                            <div class="col-md-2">
                                                 <label for="descriptionInput">Description</label>
                                             </div>
-                                            <div class="col-md-9">
-                                                <textarea class="form-control" rows="3" id="descriptionInput"></textarea>
+                                            <div class="col-md-10">
+                                                <textarea class="form-control" rows="2" id="descriptionInput"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -49,21 +46,16 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <button class="btn btn-primary" type="button">
-                                            <i class="fas fa-edit"></i> Edit
-                                        </button>
-                                        <button class="btn btn-danger" type="button">
-                                            <i class="fas fa-trash-alt"></i> Delete
-                                        </button>
-                                        <button class="btn btn-success" type="submit">
+                                        <button class="btn btn-success form-control mt-2" type="submit">
                                             <i class="fas fa-check"></i> Submit
                                         </button>
                                     </div>
                                 </div>
                             </div>
+                            <div class="alert alert-success">
+                                <strong>Success!</strong> Your form has been submitted successfully.
+                            </div>
                         </form>
-
-
                     </div>
                 </div>
             </div>
@@ -73,6 +65,7 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
+                            <td>Select</td>
                             <td>Name</td>
                             <td>Description</td>
                             <td>Operation</td>
@@ -80,6 +73,7 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td><input class="form-check-label" type="checkbox" /></td>
                             <td>
                                 Running
                             </td>
@@ -93,12 +87,8 @@
                                 <button class="btn btn-danger" type="button">
                                     <i class="fas fa-trash-alt"></i> Delete
                                 </button>
-                                <button class="btn btn-success" type="button">
-                                    <i class="fas fa-check"></i> Select
-                                </button>
                             </td>
                         </tr>
-
                     </tbody>
                 </table>
             </div>
