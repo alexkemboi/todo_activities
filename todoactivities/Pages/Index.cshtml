@@ -5,5 +5,103 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome to our todoactivities application</h1>
+    <h1 class="display-4">Welcome</h1> 
+    <div class="card">
+        <div class="card-header">
+            <h5 >Activities</h5>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card m-2">
+                    <div class="card-header">
+                            <h6>Add activity</h6>
+                    </div>
+                    <div class="card-body">
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="activityInput">Activity Name</label>
+
+                                            </div>
+                                            <div class="col-md-6">
+                                                 <input class="form-control" type="text" id="activityInput" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label for="descriptionInput">Description</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <textarea class="form-control" rows="3" id="descriptionInput"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fas fa-edit"></i> Edit
+                                        </button>
+                                        <button class="btn btn-danger" type="button">
+                                            <i class="fas fa-trash-alt"></i> Delete
+                                        </button>
+                                        <button class="btn btn-success" type="submit">
+                                            <i class="fas fa-check"></i> Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Description</td>
+                            <td>Operation</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Running
+                            </td>
+                            <td>
+                                Running from the house to the bus station
+                            </td>
+                            <td>
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                                <button class="btn btn-danger" type="button">
+                                    <i class="fas fa-trash-alt"></i> Delete
+                                </button>
+                                <button class="btn btn-success" type="button">
+                                    <i class="fas fa-check"></i> Select
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
