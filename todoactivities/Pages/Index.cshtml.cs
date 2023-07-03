@@ -1,32 +1,26 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace todoactivities.Pages
 {
     public class IndexModel : PageModel
-    {
-        private readonly ILogger<IndexModel> _logger;
+    {   public string activityName { get; set; }
+        public string activityDescription { get; set; }
+        public string activityDate { get; set; }
+        public string activityTime { get; set; }
+        public int counter { get; set; }
+        
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public void AddActivity(object sender, EventArgs e)
         {
-            _logger = logger;
+            activityName = Request.Form["acivityNameInput"];
+            activityDescription = Request.Form["activityDescriptionInput"];
+            activityDate = Request.Form["activityDateInput"];
+            activityTime = Request.Form["acitvityTimeInput"];
+            Console.WriteLine(activityName);
+            Console.WriteLine(activityDescription);
+            Console.WriteLine(activityDate);
+            Console.WriteLine(activityTime);
         }
-
-        public void OnGet()
-        {
-
-        }
-        public IActionResult OnPost(string activityInput, string descriptionInput)
-        {
-            _logger.LogInformation("Activity: " + activityInput);
-            _logger.LogInformation("Description: " + descriptionInput);
-
-            // Additional processing logic
-
-            return Partial("_SuccessMessage"); // Return a partial view indicating successful form submission
-
-        }
+  
     }
 }
